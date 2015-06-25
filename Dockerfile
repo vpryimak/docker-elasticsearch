@@ -5,7 +5,7 @@ MAINTAINER Viacheslav Pryimak <vpryimak@intropro.com"
 RUN apt-get update && \
   apt-get -y upgrade && \
   apt-get -y install wget libssl1.0.0 python openjdk-7-jre  && \
-  wget -q https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.6.0.deb -O elasticsearch.deb && \
+  wget -q https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.5.2.deb -O elasticsearch.deb && \
   dpkg -i elasticsearch.deb && \
   rm elasticsearch.deb && /usr/share/elasticsearch/bin/plugin -install mobz/elasticsearch-head
 ##################### INSTALLATION END #####################
