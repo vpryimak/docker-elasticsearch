@@ -7,7 +7,7 @@ RUN apt-get update && \
   apt-get -y install wget libssl1.0.0 python openjdk-7-jre  && \
   wget -q https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.2.1/elasticsearch-2.2.1.deb -O elasticsearch.deb && \
   dpkg -i elasticsearch.deb && \
-  rm elasticsearch.deb && /usr/share/elasticsearch/bin/plugin -install mobz/elasticsearch-head
+  rm elasticsearch.deb && /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head
 ##################### INSTALLATION END #####################
 
 CMD ["/usr/share/elasticsearch/bin/elasticsearch"]
