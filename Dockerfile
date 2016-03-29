@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 MAINTAINER Viacheslav Pryimak <vpryimak@intropro.com"
 
 ################## BEGIN INSTALLATION ######################
-RUN apt-get install software-properties-common
+RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:webupd8team/java
 RUN apt-get update && \
   apt-get -y upgrade && \
