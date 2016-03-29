@@ -10,6 +10,8 @@ RUN apt-get update && \
 RUN chown -R elasticsearch:elasticsearch /usr/share/elasticsearch
 ADD ./start.sh /
 RUN chmod +x /start.sh
+RUN rm /etc/elasticsearch/elasticsearch.yml
+ADD ./conf/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 ##################### INSTALLATION END #####################
 
 ENTRYPOINT ["/start.sh"]
